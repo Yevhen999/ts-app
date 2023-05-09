@@ -11,9 +11,22 @@ let anything: any = -20;
 anything = "Text";
 anything = {};
 
-// let some: unknown;
-// some = "Text";
+let some: unknown;
+some = "Text";
 
-// let str: string;
+let str: string;
 
-// str = some;
+if (typeof some === "string") {
+  str = some;
+}
+
+let person: [string, number] = ["Max", 21];
+
+enum Status {
+  LOADING,
+  READY,
+}
+
+const a: string | number = "";
+
+const b: "enable" | "disable" = "enable";
