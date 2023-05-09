@@ -30,3 +30,33 @@ enum Status {
 const a: string | number = "";
 
 const b: "enable" | "disable" = "enable";
+
+function showMessage(message: string): void {
+  console.log(message);
+}
+
+function calc(num1: number, num2: number) {
+  return num1 + num2;
+}
+
+function customError() {
+  throw new Error("Error");
+}
+
+// const page1 = {
+//   title: "The awesome page",
+//   likes: 100,
+//   accounts: ["Max", "Anton", "Nikita"],
+//   status: "open",
+//   details: {
+//     createAt: "2021-01-01",
+//     updateAt: "2021-05-01",
+//   },
+// };
+
+// const page2 = {
+//   title: "Python or Js",
+//   likes: 5,
+//   accounts: ["Alex"],
+//   status: "close",
+// };
