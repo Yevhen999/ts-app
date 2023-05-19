@@ -27,21 +27,27 @@ enum Status {
   READY,
 }
 
-const a: string | number = "";
+let a: string | number;
 
-const b: "enable" | "disable" = "enable";
+let b: "enable" | "disable";
+
+b = "disable";
 
 function showMessage(message: string): void {
   console.log(message);
 }
 
-function calc(num1: number, num2: number) {
+function calc(num1: number, num2: number): number {
   return num1 + num2;
 }
 
-function customError() {
+function customError(): never {
   throw new Error("Error");
 }
+
+// function customError(): never {
+//   throw new Error("Error");
+// }
 
 // const page1 = {
 //   title: "The awesome page",
