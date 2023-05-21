@@ -45,10 +45,6 @@ function customError(): never {
   throw new Error("Error");
 }
 
-// function customError(): never {
-//   throw new Error("Error");
-// }
-
 // const page1 = {
 //   title: "The awesome page",
 //   likes: 100,
