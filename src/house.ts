@@ -11,25 +11,26 @@ class Key {
 }
 
 class Person {
-  public key: number;
+  constructor(private key: Key) {}
 
-  constructor(b: Key) {
-    this.key = b.signature;
-  }
-
-  getKey() {
+  getKey(): Key {
     return this.key;
   }
 }
 
-// abstract class House extends Key {
-//   public door: boolean = false;
-//   public tenants: string;
+abstract class House {
+  protected door = false;
+  private tenants: Person[] = [];
+  constructor(protected key: Key) {}
 
-//   comeIn(a: Person) {
-//     this.tenants = a;
-//   }
-// }
+  comeIn(person: Person): void {
+    if (!this.door) {
+      throw new Error("Door is closed");
+    }
+    this.tenants.push(person);
+    console.log("The person is inside");
+  }
+}
 // Створіть абстрактний клас House, в ньому повинна бути наступна логіка
 
 // властивість door – вона може бути закрита, або відкрита.
