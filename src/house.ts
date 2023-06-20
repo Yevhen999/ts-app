@@ -31,10 +31,21 @@ abstract class House {
     console.log("The person is inside");
   }
 }
-// Створіть абстрактний клас House, в ньому повинна бути наступна логіка
 
-// властивість door – вона може бути закрита, або відкрита.
-// властивість key – об'єкт класу Key.
-// конструктор приймає аргумент класу Key та зберігає його у властивість key.
-// метод comeIn, який додає об'єкт класу Person у властивість tenants і це спрацьовує лише, якщо door відкрита.
-// абстрактний метод openDoor приймає аргумент класу Key
+class MyHouse extends House {
+  openDoor(key: Key) {
+    if (key.getSignature() !== this.key.getSignature()) {
+      throw new Error("This key to another door");
+    }
+    return (this.door = true);
+  }
+}
+
+const key = new Key();
+
+const house = new MyHouse(key);
+
+const person = new Person(key);
+
+house.openDoor(person.getKey());
+house.comeIn(person);
