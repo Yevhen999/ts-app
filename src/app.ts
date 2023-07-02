@@ -1,11 +1,18 @@
-let arr: Array<string | number>;
+type AllType = {
+  name: string;
+  position: number;
+  color: string;
+  weight: number;
+};
 
-arr = ["1", 1];
-
-const promise: Promise<string> = new Promise((resolve) => {
-  resolve("String");
-});
-
-promise.then((data) => {
-  console.log(data);
-});
+function compare(
+  top: Pick<AllType, "name" | "color">,
+  bottom: Pick<AllType, "position" | "weight">
+): AllType {
+  return {
+    name: top.name,
+    color: top.color,
+    position: bottom.position,
+    weight: bottom.weight,
+  };
+}
