@@ -1,12 +1,5 @@
-interface Person {
-  name: string;
-  additionInfo?: {
-    someInfo: string;
-  };
-}
+const userInput = "";
 
-const user: Person = {
-  name: "Yevhen",
-};
+const store = userInput ?? "DEFAULT";
 
-user?.additionInfo?.someInfo;
+console.log(store);
