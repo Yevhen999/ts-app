@@ -1,5 +1,10 @@
-const userInput = "";
+function add(a: number, b: number): number;
 
-const store = userInput ?? "DEFAULT";
+function add(a: string, b: string): string;
 
-console.log(store);
+function add(a: string | number, b: string | number) {
+  if (typeof a === "string" || typeof b === "string") {
+    return a.toString() + b.toString();
+  }
+  return a + b;
+}
