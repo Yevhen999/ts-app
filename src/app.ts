@@ -1,3 +1,1 @@
-let a: string = "str";
-
-a = "s";
+const input = document.getElementById("inputEmail");
