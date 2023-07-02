@@ -1,10 +1,11 @@
-function add(a: number, b: number): number;
+let arr: Array<string | number>;
 
-function add(a: string, b: string): string;
+arr = ["1", 1];
 
-function add(a: string | number, b: string | number) {
-  if (typeof a === "string" || typeof b === "string") {
-    return a.toString() + b.toString();
-  }
-  return a + b;
-}
+const promise: Promise<string> = new Promise((resolve) => {
+  resolve("String");
+});
+
+promise.then((data) => {
+  console.log(data);
+});
