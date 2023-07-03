@@ -33,3 +33,18 @@ function compare(
 function merge<T extends object, U extends object>(objA: T, objB: U): object {
   return Object.assign(objA, objB);
 }
+
+// ----------------prct four-------------
+class Component<T> {
+  constructor(public props: T) {}
+}
+
+interface IProps {
+  title: string;
+}
+
+class Page extends Component<IProps> {
+  pageInfo() {
+    console.log(this.props.title);
+  }
+}
