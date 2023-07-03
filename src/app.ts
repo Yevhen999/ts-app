@@ -25,3 +25,10 @@ storeUsers.addItem({
 });
 
 console.log(storeUsers.getItems());
+
+const ageStore = new DataStore<number>();
+
+ageStore.addItem(21);
+ageStore.addItem(35);
+
+console.log(ageStore.getItems());
